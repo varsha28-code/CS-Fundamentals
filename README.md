@@ -4,6 +4,12 @@
 	<img src="assets/github-banner.svg" alt="CS Fundamentals Banner" width="1200" height="320" />
 </p>
 
+<p align="center">
+  <a href="https://varsha28-code.github.io/CS-Fundamentals/">
+    <img src="https://img.shields.io/badge/Web%20App-Interactive%20Reader-purple?style=for-the-badge" alt="Interactive Reader Web App" />
+  </a>
+</p>
+
 ![DSA](https://img.shields.io/badge/Focus-DSA-blue?style=flat-square)
 ![OS](https://img.shields.io/badge/Focus-Operating%20Systems-important?style=flat-square)
 ![DBMS](https://img.shields.io/badge/Focus-DBMS-success?style=flat-square)
