@@ -1,0 +1,437 @@
+[
+  {
+    "subject": "Compiler Design",
+    "chapters": [
+      {
+        "title": "Ch 01 - Introduction to compilers",
+        "path": "Compiler Design/Ch 01 - Introduction to compilers.md"
+      },
+      {
+        "title": "Ch 02 - Lexical Analysis",
+        "path": "Compiler Design/Ch 02 - Lexical Analysis.md"
+      },
+      {
+        "title": "Ch 03 - Syntax Analysis (Parsing)",
+        "path": "Compiler Design/Ch 03 - Syntax Analysis (Parsing).md"
+      },
+      {
+        "title": "Ch 04 - Syntax-Directed Translation (SDT)",
+        "path": "Compiler Design/Ch 04 - Syntax-Directed Translation (SDT).md"
+      },
+      {
+        "title": "Ch 05 - Intermediate Code Generation",
+        "path": "Compiler Design/Ch 05 - Intermediate Code Generation.md"
+      },
+      {
+        "title": "Ch 06 - Symbol Table and Runtime Environment",
+        "path": "Compiler Design/Ch 06 - Symbol Table and Runtime Environment.md"
+      },
+      {
+        "title": "Ch 07 - Code Optimization",
+        "path": "Compiler Design/Ch 07 - Code Optimization.md"
+      },
+      {
+        "title": "Ch 08 - Code Generation",
+        "path": "Compiler Design/Ch 08 - Code Generation.md"
+      },
+      {
+        "title": "Ch 09 - Parsing Algorithms in Depth",
+        "path": "Compiler Design/Ch 09 - Parsing Algorithms in Depth.md"
+      },
+      {
+        "title": "Ch 10 - Important Comparisons and Concepts for Interviews",
+        "path": "Compiler Design/Ch 10 - Important Comparisons and Concepts for Interviews.md"
+      },
+      {
+        "title": "Ch 11 - Miscellaneous & Advanced Topics",
+        "path": "Compiler Design/Ch 11 - Miscellaneous & Advanced Topics.md"
+      },
+      {
+        "title": "Ch 12 - Numerical and Problem Solving Practice",
+        "path": "Compiler Design/Ch 12 - Numerical and Problem Solving Practice.md"
+      },
+      {
+        "title": "syllabus",
+        "path": "Compiler Design/syllabus.md"
+      }
+    ]
+  },
+  {
+    "subject": "Computer Network",
+    "chapters": [
+      {
+        "title": "Ch 01 - Intro to Computer Networks",
+        "path": "Computer Network/Ch 01 - Intro to Computer Networks.md"
+      },
+      {
+        "title": "Ch 02 - Network Models",
+        "path": "Computer Network/Ch 02 - Network Models.md"
+      },
+      {
+        "title": "Ch 03 - Physical Layer",
+        "path": "Computer Network/Ch 03 - Physical Layer.md"
+      },
+      {
+        "title": "Ch 04 - Data Link Layer",
+        "path": "Computer Network/Ch 04 - Data Link Layer.md"
+      },
+      {
+        "title": "Ch 05 - Network Layer",
+        "path": "Computer Network/Ch 05 - Network Layer.md"
+      },
+      {
+        "title": "Ch 06 - Transport Layer",
+        "path": "Computer Network/Ch 06 - Transport Layer.md"
+      },
+      {
+        "title": "Ch 07 - Application Layer",
+        "path": "Computer Network/Ch 07 - Application Layer.md"
+      },
+      {
+        "title": "Ch 08 - Network Security",
+        "path": "Computer Network/Ch 08 - Network Security.md"
+      },
+      {
+        "title": "Ch 09 - Congestion Control and QoS",
+        "path": "Computer Network/Ch 09 - Congestion Control and QoS.md"
+      },
+      {
+        "title": "Ch 10 - Wireless and Mobile Network",
+        "path": "Computer Network/Ch 10 - Wireless and Mobile Network.md"
+      },
+      {
+        "title": "Ch 11 - Numerical Topics",
+        "path": "Computer Network/Ch 11 - Numerical Topics.md"
+      },
+      {
+        "title": "Ch 12 - Interview Topics",
+        "path": "Computer Network/Ch 12 - Interview Topics.md"
+      },
+      {
+        "title": "syllabus",
+        "path": "Computer Network/syllabus.md"
+      }
+    ]
+  },
+  {
+    "subject": "DBMS",
+    "chapters": [
+      {
+        "title": "Ch 01 - Database Fundamentals",
+        "path": "DBMS/Ch 01 - Database Fundamentals.md"
+      },
+      {
+        "title": "Ch 02 - Relational Model",
+        "path": "DBMS/Ch 02 - Relational Model.md"
+      },
+      {
+        "title": "Ch 03 - Relational Algebra",
+        "path": "DBMS/Ch 03 - Relational Algebra.md"
+      },
+      {
+        "title": "Ch 04 - SQL",
+        "path": "DBMS/Ch 04 - SQL.md"
+      },
+      {
+        "title": "Ch 05 - ER Model",
+        "path": "DBMS/Ch 05 - ER Model.md"
+      },
+      {
+        "title": "Ch 06 - Functional Dependencies",
+        "path": "DBMS/Ch 06 - Functional Dependencies.md"
+      },
+      {
+        "title": "Ch 07 - Normalization",
+        "path": "DBMS/Ch 07 - Normalization.md"
+      },
+      {
+        "title": "Ch 08 - Transactions",
+        "path": "DBMS/Ch 08 - Transactions.md"
+      },
+      {
+        "title": "Ch 09 - Concurrency Control",
+        "path": "DBMS/Ch 09 - Concurrency Control.md"
+      },
+      {
+        "title": "Ch 10 - Recovery System",
+        "path": "DBMS/Ch 10 - Recovery System.md"
+      },
+      {
+        "title": "Ch 11 - Indexing",
+        "path": "DBMS/Ch 11 - Indexing.md"
+      },
+      {
+        "title": "Ch 12 - File Organization & Hashing",
+        "path": "DBMS/Ch 12 - File Organization & Hashing.md"
+      },
+      {
+        "title": "Ch 13 - Storage and Buffer Management",
+        "path": "DBMS/Ch 13 - Storage and Buffer Management.md"
+      },
+      {
+        "title": "syllabus",
+        "path": "DBMS/syllabus.md"
+      }
+    ]
+  },
+  {
+    "subject": "Data Structure and Algorithms",
+    "chapters": [
+      {
+        "title": "Ch 01 - Introduction to DSA",
+        "path": "Data Structure and Algorithms/Ch 01 - Introduction to DSA.md"
+      },
+      {
+        "title": "Ch 02 - Mathematics & Prerequisites",
+        "path": "Data Structure and Algorithms/Ch 02 - Mathematics & Prerequisites.md"
+      },
+      {
+        "title": "Ch 03 - Arrays and Strings",
+        "path": "Data Structure and Algorithms/Ch 03 - Arrays and Strings.md"
+      },
+      {
+        "title": "Ch 04 - Linked List",
+        "path": "Data Structure and Algorithms/Ch 04 - Linked List.md"
+      },
+      {
+        "title": "Ch 05 - Stacks and Queues",
+        "path": "Data Structure and Algorithms/Ch 05 - Stacks and Queues.md"
+      },
+      {
+        "title": "Ch 06 - Recursion and Backtracking",
+        "path": "Data Structure and Algorithms/Ch 06 - Recursion and Backtracking.md"
+      },
+      {
+        "title": "Ch 07 - Divide & Conquer",
+        "path": "Data Structure and Algorithms/Ch 07 - Divide & Conquer.md"
+      },
+      {
+        "title": "Ch 08 - Sorting & Searching",
+        "path": "Data Structure and Algorithms/Ch 08 - Sorting & Searching.md"
+      },
+      {
+        "title": "Ch 09 - Hashing",
+        "path": "Data Structure and Algorithms/Ch 09 - Hashing.md"
+      },
+      {
+        "title": "Ch 10 - Trees",
+        "path": "Data Structure and Algorithms/Ch 10 - Trees.md"
+      },
+      {
+        "title": "Ch 11 - Graphs",
+        "path": "Data Structure and Algorithms/Ch 11 - Graphs.md"
+      },
+      {
+        "title": "Ch 12 - Dynamic Programming (DP)",
+        "path": "Data Structure and Algorithms/Ch 12 - Dynamic Programming (DP).md"
+      },
+      {
+        "title": "Ch 13 - Greedy Algorithms",
+        "path": "Data Structure and Algorithms/Ch 13 - Greedy Algorithms.md"
+      },
+      {
+        "title": "Ch 14 - Important Interview Topics",
+        "path": "Data Structure and Algorithms/Ch 14 - Important Interview Topics.md"
+      },
+      {
+        "title": "Ch 15 - Complexity Analysis & Numerical Problems",
+        "path": "Data Structure and Algorithms/Ch 15 - Complexity Analysis & Numerical Problems.md"
+      },
+      {
+        "title": "Ch 16 - Advanced & Miscellaneous Topics",
+        "path": "Data Structure and Algorithms/Ch 16 - Advanced & Miscellaneous Topics.md"
+      },
+      {
+        "title": "syllabus",
+        "path": "Data Structure and Algorithms/syllabus.md"
+      }
+    ]
+  },
+  {
+    "subject": "Object Oriented Programing",
+    "chapters": [
+      {
+        "title": "Ch 01 - Introduction to OOP and C++ Basics",
+        "path": "Object Oriented Programing/Ch 01 - Introduction to OOP and C++ Basics.md"
+      },
+      {
+        "title": "Ch 02 - Classes and Objects",
+        "path": "Object Oriented Programing/Ch 02 - Classes and Objects.md"
+      },
+      {
+        "title": "Ch 03 - Encapsulation and Data Hiding",
+        "path": "Object Oriented Programing/Ch 03 - Encapsulation and Data Hiding.md"
+      },
+      {
+        "title": "Ch 04 - Inheritance",
+        "path": "Object Oriented Programing/Ch 04 - Inheritance.md"
+      },
+      {
+        "title": "Ch 05 - Polymorphism",
+        "path": "Object Oriented Programing/Ch 05 - Polymorphism.md"
+      },
+      {
+        "title": "Ch 06 - Operator Overloading",
+        "path": "Object Oriented Programing/Ch 06 - Operator Overloading.md"
+      },
+      {
+        "title": "Ch 07 - Exception Handling",
+        "path": "Object Oriented Programing/Ch 07 - Exception Handling.md"
+      },
+      {
+        "title": "Ch 08 - Template (Generic Programming)",
+        "path": "Object Oriented Programing/Ch 08 - Template (Generic Programming).md"
+      },
+      {
+        "title": "Ch 09 - Standard Template Library(STL)",
+        "path": "Object Oriented Programing/Ch 09 - Standard Template Library(STL).md"
+      },
+      {
+        "title": "Ch 10 - Advanced C++ Features",
+        "path": "Object Oriented Programing/Ch 10 - Advanced C++ Features.md"
+      },
+      {
+        "title": "Ch 11 - Design Pattern in C++",
+        "path": "Object Oriented Programing/Ch 11 - Design Pattern in C++.md"
+      },
+      {
+        "title": "Ch 12 - Best Practices and Idioms",
+        "path": "Object Oriented Programing/Ch 12 - Best Practices and Idioms.md"
+      },
+      {
+        "title": "Ch 13 - Debugging, Testing and Tools",
+        "path": "Object Oriented Programing/Ch 13 - Debugging, Testing and Tools.md"
+      },
+      {
+        "title": "Ch 14 - Hands-on Projects and Problem Sets",
+        "path": "Object Oriented Programing/Ch 14 - Hands-on Projects and Problem Sets.md"
+      },
+      {
+        "title": "Ch 15 - Comparison with other OOPs Language",
+        "path": "Object Oriented Programing/Ch 15 - Comparison with other OOPs Language.md"
+      },
+      {
+        "title": "syllabus",
+        "path": "Object Oriented Programing/syllabus.md"
+      }
+    ]
+  },
+  {
+    "subject": "Operating System",
+    "chapters": [
+      {
+        "title": "Ch 01 - Introduction to OS",
+        "path": "Operating System/Ch 01 - Introduction to OS.md"
+      },
+      {
+        "title": "Ch 02 - Process Management",
+        "path": "Operating System/Ch 02 - Process Management.md"
+      },
+      {
+        "title": "Ch 03 - CPU Scheduling",
+        "path": "Operating System/Ch 03 - CPU Scheduling.md"
+      },
+      {
+        "title": "Ch 04 - Process Synchronization",
+        "path": "Operating System/Ch 04 - Process Synchronization.md"
+      },
+      {
+        "title": "Ch 05 - Deadlocks",
+        "path": "Operating System/Ch 05 - Deadlocks.md"
+      },
+      {
+        "title": "Ch 06 - Memory Management",
+        "path": "Operating System/Ch 06 - Memory Management.md"
+      },
+      {
+        "title": "Ch 07 - Virtual Memory",
+        "path": "Operating System/Ch 07 - Virtual Memory.md"
+      },
+      {
+        "title": "Ch 08 - File System",
+        "path": "Operating System/Ch 08 - File System.md"
+      },
+      {
+        "title": "Ch 09 - IO Systems",
+        "path": "Operating System/Ch 09 - IO Systems.md"
+      },
+      {
+        "title": "Ch 10 - Protection & Security",
+        "path": "Operating System/Ch 10 - Protection & Security.md"
+      },
+      {
+        "title": "Ch 11 - Virtualization and Cloud Computing",
+        "path": "Operating System/Ch 11 - Virtualization and Cloud Computing.md"
+      },
+      {
+        "title": "Ch 12 - Distributed Operating Systems",
+        "path": "Operating System/Ch 12 - Distributed Operating Systems.md"
+      },
+      {
+        "title": "Ch 13 - Advanced Topics",
+        "path": "Operating System/Ch 13 - Advanced Topics.md"
+      },
+      {
+        "title": "Syllabus",
+        "path": "Operating System/Syllabus.md"
+      }
+    ]
+  },
+  {
+    "subject": "Theory Of Computation",
+    "chapters": [
+      {
+        "title": "Ch01 - Introduction of TOC",
+        "path": "Theory Of Computation/Ch01 - Introduction of TOC.md"
+      },
+      {
+        "title": "Ch02 - Finite Automata",
+        "path": "Theory Of Computation/Ch02 - Finite Automata.md"
+      },
+      {
+        "title": "Ch03 - Regular Languages and Regular Expressions",
+        "path": "Theory Of Computation/Ch03 - Regular Languages and Regular Expressions.md"
+      },
+      {
+        "title": "Ch04 - Pumping Lemma for RL",
+        "path": "Theory Of Computation/Ch04 - Pumping Lemma for RL.md"
+      },
+      {
+        "title": "Ch05 - Context-Free Grammars (CFG)",
+        "path": "Theory Of Computation/Ch05 - Context-Free Grammars (CFG).md"
+      },
+      {
+        "title": "Ch06 - Simplification and Normal Forms of CFG",
+        "path": "Theory Of Computation/Ch06 - Simplification and Normal Forms of CFG.md"
+      },
+      {
+        "title": "Ch07 - Pushdown Automata",
+        "path": "Theory Of Computation/Ch07 - Pushdown Automata.md"
+      },
+      {
+        "title": "Ch08 - Pumping Lemma for Context-Free Languages",
+        "path": "Theory Of Computation/Ch08 - Pumping Lemma for Context-Free Languages.md"
+      },
+      {
+        "title": "Ch09 - Turing Machine",
+        "path": "Theory Of Computation/Ch09 - Turing Machine.md"
+      },
+      {
+        "title": "Ch10 - Decidability and Undecidability",
+        "path": "Theory Of Computation/Ch10 - Decidability and Undecidability.md"
+      },
+      {
+        "title": "Ch11 - Chomsky Hierarchy",
+        "path": "Theory Of Computation/Ch11 - Chomsky Hierarchy.md"
+      },
+      {
+        "title": "Ch12 -  Introduction to Computational Complexity",
+        "path": "Theory Of Computation/Ch12 -  Introduction to Computational Complexity.md"
+      },
+      {
+        "title": "syllabus",
+        "path": "Theory Of Computation/syllabus.md"
+      }
+    ]
+  }
+]
