@@ -1,0 +1,68 @@
+# Importing the required libraries
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn import metrics
+import seaborn as sns
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn import tree
+from sklearn.tree import DecisionTreeClassifier
+
+# Loading the dataset
+iris = load_iris()
+
+# Converting the data to a pandas DataFrame
+data = pd.DataFrame(data=iris.data, columns=iris.feature_names)
+
+# Creating a separate column for the target variable of the iris dataset
+data['Species'] = iris.target
+
+# Replacing the numeric target categories with actual species names
+target_dict = dict(zip(np.unique(iris.target), np.unique(iris.target_names)))
+data['Species'] = data['Species'].replace(target_dict)
+
+# Separating independent and dependent variables
+x = data.drop(columns="Species")
+y = data["Species"]
+names_features = x.columns
+target_labels = y.unique()
+
+# Splitting the dataset into training and testing sets
+x_train, x_test, y_train, y_test = train_test_split(
+    x, y, test_size=0.3, random_state=93
+)
+
+# Importing and initializing the Decision Tree classifier
+dtc = DecisionTreeClassifier(max_depth=3, random_state=93)
+
+# Fitting the training dataset to the model
+dtc.fit(x_train, y_train)
+
+# Plotting the Decision Tree
+plt.figure(figsize=(30, 10), facecolor='b')
+tree.plot_tree(
+    dtc,
+    feature_names=names_features,
+    class_names=target_labels,
+    filled=True,
+    rounded=True,
+    fontsize=12
+)
+plt.show()
+
+# Making predictions
+y_pred = dtc.predict(x_test)
+
+# Computing the confusion matrix
+conf_matrix = metrics.confusion_matrix(y_test, y_pred)
+matrix = pd.DataFrame(conf_matrix, index=target_labels, columns=target_labels)
+
+# Plotting the confusion matrix as a heatmap
+plt.figure(figsize=(8, 6))
+sns.set(font_scale=1.2)
+sns.heatmap(matrix, annot=True, cmap="magma", fmt="d")
+plt.title("Confusion Matrix", fontsize=16)
+plt.xlabel("Predicted Labels", fontsize=12)
+plt.ylabel("True Labels", fontsize=12)
+plt.show()

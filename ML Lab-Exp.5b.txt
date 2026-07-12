@@ -1,0 +1,50 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
+
+# Step 1: Create a simple dataset
+data = {
+    'size': [800, 1000, 1200, 1500, 1800, 2000, 2200, 2500, 2800, 3000],
+    'price': [200000, 250000, 270000, 340000, 360000, 400000, 420000, 480000, 500000, 550000]
+}
+
+# Convert to DataFrame
+df = pd.DataFrame(data)
+
+# Step 2: Define independent (X) and dependent (y) variables
+X = df[['size']]   # Must be 2D
+y = df['price']    # 1D target
+
+# Step 3: Split data into train and test sets (80% train, 20% test)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Step 4: Create Linear Regression model and train it
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+# Step 5: Predict on test data
+y_pred = model.predict(X_test)
+
+# Step 6: Evaluate model
+mse = mean_squared_error(y_test, y_pred)
+print(f"Mean Squared Error: {mse:.2f}")
+
+# Step 7: Get slope and intercept
+slope = model.coef_[0]
+intercept = model.intercept_
+
+print(f"Slope (Coefficient): {slope:.2f}")
+print(f"Intercept: {intercept:.2f}")
+
+# Step 8: Plot regression line
+plt.scatter(X, y, color='blue', label='Actual Data')
+plt.plot(X, model.predict(X), color='red', label='Regression Line')
+
+plt.xlabel('Size (Square Feet)')
+plt.ylabel('Price ($)')
+plt.title('Simple Linear Regression: House Size vs Price')
+plt.legend()
+plt.show()

@@ -1,0 +1,187 @@
+# Step 1: Import necessary libraries
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import LogisticRegression
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.svm import SVC
+from sklearn.metrics import accuracy_score, confusion_matrix, classification_report, roc_auc_score
+
+# Step 2: Load the dataset (Iris dataset in this case)
+data = load_iris()
+X = data.data  # Features (sepal length, sepal width, petal length, petal width)
+y = data.target  # Target labels (Iris species)
+
+# Step 3: Split the dataset into training and testing sets (70% train, 30% test)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Step 4: Feature scaling (Standardization of features)
+scaler = StandardScaler()
+X_train_scaled = scaler.fit_transform(X_train)
+X_test_scaled = scaler.transform(X_test)
+
+# Step 5: Initialize the classification models
+models = {
+    "Logistic Regression": LogisticRegression(),
+    "Decision Tree": DecisionTreeClassifier(),
+    "K-Nearest Neighbors": KNeighborsClassifier(),
+    "Random Forest": RandomForestClassifier(),
+    "Support Vector Machine": SVC(probability=True)
+}
+
+# Step 6: Train and evaluate each model
+results = {}
+for model_name, model in models.items():
+    # Train the model
+    model.fit(X_train_scaled, y_train)
+
+    # Predict on the test set
+    y_pred = model.predict(X_test_scaled)
+
+    # Calculate accuracy
+    accuracy = accuracy_score(y_test, y_pred)
+
+    # Confusion matrix
+    conf_matrix = confusion_matrix(y_test, y_pred)
+
+    # Classification report (precision, recall, F1-score)
+    class_report = classification_report(y_test, y_pred, output_dict=True)
+
+    # ROC-AUC Score
+    # Check if binary or multi-class for proper ROC-AUC calculation
+    if len(np.unique(y)) == 2:
+        roc_auc = roc_auc_score(y_test, model.predict_proba(X_test_scaled)[:, 1])
+    else:
+        roc_auc = roc_auc_score(y_test, model.predict_proba(X_test_scaled), multi_class='ovr')
+
+    results[model_name] = {
+        "Accuracy": accuracy,
+        "Confusion Matrix": conf_matrix,
+        "Classification Report": class_report,
+        "ROC-AUC": roc_auc
+    }
+
+# Step 7: Display results
+for model_name, result in results.items():
+    print(f"\nModel: {model_name}")
+    print(f"Accuracy: {result['Accuracy']:.2f}")
+    print("Confusion Matrix:")
+    print(result["Confusion Matrix"])
+    print("Classification Report:")
+    print(pd.DataFrame(result["Classification Report"]).T)
+    print(f"ROC-AUC: {result['ROC-AUC']:.2f}")
+
+# Step 8: Compare performance with a bar plot (Accuracy, ROC-AUC)
+accuracy_scores = [result['Accuracy'] for result in results.values()]
+roc_auc_scores = [result['ROC-AUC'] for result in results.values()]
+
+# Plotting the results
+fig, ax = plt.subplots(1, 2, figsize=(14, 6))
+
+ax[0].barh(list(results.keys()), accuracy_scores, color='skyblue')
+ax[0].set_xlabel('Accuracy')
+ax[0].set_title('Accuracy Comparison')
+ax[0].set_xlim(0, 1.1) # Optional: sets limit slightly above 1 for better visibility if all are perfect
+
+ax[1].barh(list(results.keys()), roc_auc_scores, color='lightgreen')
+ax[1].set_xlabel('ROC-AUC')
+ax[1].set_title('ROC-AUC Comparison')
+ax[1].set_xlim(0, 1.1) # Optional: sets limit slightly above 1
+
+plt.tight_layout()
+plt.show()
+
+
+
+OUTPUT: 
+Model: Logistic Regression 
+Accuracy: 1.00 
+Confusion Matrix: 
+[[19  0  0] 
+ [ 0 13  0] 
+ [ 0  0 13]] 
+Classification Report: 
+                 precision   recall  f1-score  support 
+0                      1.0       1.0       1.0        19.0 
+1                      1.0       1.0       1.0        13.0 
+2                      1.0       1.0       1.0        13.0 
+accuracy          1.0       1.0       1.0        1.0 
+macro avg       1.0        1.0       1.0        45.0 
+weighted avg   1.0        1.0       1.0       45.0 
+ROC-AUC: 1.00 
+ 
+ 
+Model: Decision Tree 
+Accuracy: 1.00 
+Confusion Matrix: 
+[[19  0  0] 
+ [ 0 13  0] 
+ [ 0  0 13]] 
+Classification Report: 
+              precision  recall  f1-score  support 
+0                   1.0     1.0       1.0     19.0 
+1                   1.0     1.0       1.0     13.0 
+2                   1.0     1.0       1.0     13.0 
+accuracy            1.0     1.0       1.0      1.0 
+macro avg           1.0     1.0       1.0     45.0 
+weighted avg        1.0     1.0       1.0     45.0 
+ROC-AUC: 1.00 
+ 
+ 
+Model: K-Nearest Neighbors 
+Accuracy: 1.00 
+Confusion Matrix: 
+[[19  0  0] 
+ [ 0 13  0] 
+ [ 0  0 13]] 
+Classification Report: 
+              precision     recall     f1-score    support 
+0                   1.0          1.0          1.0           19.0 
+1                   1.0          1.0          1.0           13.0 
+2                   1.0          1.0          1.0           13.0 
+accuracy       1.0          1.0          1.0           1.0 
+macro avg     1.0         1.0          1.0          45.0 
+weighted avg 1.0        1.0          1.0          45.0 
+ROC-AUC: 1.00 
+ 
+ 
+ 
+Model: Random Forest 
+Accuracy: 1.00 
+Confusion Matrix: 
+[[19  0  0] 
+ [ 0 13  0] 
+ [ 0  0 13]] 
+Classification Report: 
+              precision      recall     f1-score    support 
+0                   1.0          1.0          1.0           19.0 
+1                   1.0          1.0          1.0          13.0 
+2                   1.0          1.0          1.0          13.0 
+accuracy       1.0          1.0          1.0           1.0 
+macro avg     1.0          1.0          1.0        45.0 
+weighted avg 1.0         1.0          1.0        45.0 
+ROC-AUC: 1.00 
+ 
+ 
+ 
+Model: Support Vector Machine 
+Accuracy: 1.00 
+Confusion Matrix: 
+[[19  0  0] 
+ [ 0 13  0] 
+ [ 0  0 13]] 
+Classification Report: 
+              precision   recall  f1-score  support 
+0                   1.0     1.0       1.0     19.0 
+1                   1.0     1.0       1.0     13.0 
+2                   1.0     1.0       1.0     13.0 
+accuracy       1.0     1.0       1.0      1.0 
+macro avg       1.0     1.0       1.0     45.0 
+weighted avg    1.0     1.0       1.0     45.0 
+ 
+ROC-AUC: 1.00

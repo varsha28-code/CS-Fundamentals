@@ -1,0 +1,78 @@
+import pandas as pd
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+from sklearn.model_selection import GridSearchCV
+# Load the Iris dataset
+iris = load_iris()
+X = iris.data  # Features
+y = iris.target  # Target variable
+
+# Split the dataset into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+
+# Create a Decision Tree classifier
+dt_model = DecisionTreeClassifier(random_state=42)
+
+# Train the model
+dt_model.fit(X_train, y_train)
+
+# Make predictions
+y_pred = dt_model.predict(X_test)
+
+# Evaluate the model
+accuracy = accuracy_score(y_test, y_pred)
+print(f"Accuracy: {accuracy:.2f}")
+print("Classification Report:")
+print(classification_report(y_test, y_pred))
+print("Confusion Matrix:")
+print(confusion_matrix(y_test, y_pred))
+
+# Define the parameter grid for tuning
+param_grid = {
+    'max_depth': [None, 2, 4, 6, 8, 10],
+    'min_samples_split': [2, 5, 10],
+    'min_samples_leaf': [1, 2, 4]
+}
+
+# Create a GridSearchCV object
+grid_search = GridSearchCV(
+    estimator=dt_model,
+    param_grid=param_grid,
+    cv=5,
+    n_jobs=-1,
+    verbose=1
+)
+
+# Fit the grid search
+grid_search.fit(X_train, y_train)
+
+# Print best parameters and best score
+print("Best Parameters:", grid_search.best_params_)
+print("Best Cross-Validation Score:", grid_search.best_score_)
+
+
+Output:
+
+Accuracy: 1.00
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00        10
+           1       1.00      1.00      1.00         9
+           2       1.00      1.00      1.00        11
+
+    accuracy                           1.00        30
+   macro avg       1.00      1.00      1.00        30
+weighted avg       1.00      1.00      1.00        30
+
+Confusion Matrix:
+[[10  0  0]
+ [ 0  9  0]
+ [ 0  0 11]]
+Fitting 5 folds for each of 54 candidates, totalling 270 fits
+Best Parameters: {'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 2}
+Best Cross-Validation Score: 0.95
