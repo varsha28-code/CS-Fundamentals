@@ -1,0 +1,16 @@
+c                  dennis ritchie           1979           bell labs
+python             guido van russum         1991
+java               james gosling            1991           sun microsystems
+
+virtual env
+to install third party packages or dependencies required to your project
+create a new folder
+path--cmd
+built in commands
+------------------
+python -m venv sampleenv(env name)
+sampleenv \scripts\activate
+pip install pypdf(third party module)
+code . #open vs code
+sample.py
+import pypdf
