@@ -1,16 +1,38 @@
 c                  dennis ritchie           1979           bell labs
 python             guido van russum         1991
 java               james gosling            1991           sun microsystems
-
-virtual env
+------------------------------------------------------------------------------
+VIRTUAL ENV IN PYTHON:-
 to install third party packages or dependencies required to your project
 create a new folder
 path--cmd
-built in commands
-------------------
+built in commands:
 python -m venv sampleenv(env name)
 sampleenv \scripts\activate
 pip install pypdf(third party module)
 code . #open vs code
 sample.py
 import pypdf
+-----------------------------------------------------------------------------
+LIST                               TUPLE                     SET
+mutable                          immutable
+
+
+-----------------------------------------------------------------------------
+Methods:--
+LIST 
+append()
+insert()
+remove()
+pop()
+sort()
+reverse()
+
+DICTIONARY
+keys()
+values()
+items()
+get()
+----------------------------------------------------------------------------
+*args allows a function to accept any number of positional arguments.
+**kwargs allows a function to accept any number of keyword arguments.
